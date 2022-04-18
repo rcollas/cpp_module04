@@ -2,8 +2,9 @@
 #define CPP_MODULE04_DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-class Dog : public AAnimal {
+class Dog : public Animal {
 
 	public:
 		Dog();
@@ -15,6 +16,7 @@ class Dog : public AAnimal {
 		void makeSound();
 
 	private:
+		Brain* m_brain;
 };
 
 

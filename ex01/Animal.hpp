@@ -3,14 +3,14 @@
 
 #include <iostream>
 
-class AAnimal {
+class Animal {
 
 	public:
-		AAnimal();
-		AAnimal(AAnimal const &src);
-		~AAnimal();
+		Animal();
+		Animal(Animal const &src);
+		virtual ~Animal();
 
-		AAnimal &operator=(AAnimal const &rhs);
+		Animal &operator=(Animal const &rhs);
 
 		virtual void makeSound();
 

@@ -1,11 +1,10 @@
-NAME		=	animals
+NAME		=	game
 
 SRC_FILES 	=	main.cpp \
-				Animal.cpp \
-				Dog.cpp \
-				Cat.cpp \
-				WrongAnimal.cpp \
-				WrongCat.cpp \
+				AMateria.cpp \
+				Ice.cpp \
+				Cure.cpp \
+				Character.cpp \
 
 OBJS_DIR	=	objs
 
@@ -13,11 +12,11 @@ SRC_DIR		=	./
 
 INC_DIR		=	./
 
-INC_FILES	=	Animal.hpp \
-				Dog.hpp \
-				Cat.hpp \
-				WrongAnimal.hpp \
-				WrongCat.hpp \
+INC_FILES	=	AMateria.hpp \
+				Ice.hpp \
+				Cure.hpp \
+				ICharacter.hpp \
+				Character.hpp \
 
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRC_FILES:.cpp=.o))
 

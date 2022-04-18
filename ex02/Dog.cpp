@@ -3,12 +3,14 @@
 Dog::Dog() : AAnimal() {
 
 	m_type = "Dog";
+	m_brain = new Brain;
 	std::cout << "\x1B[33mDog created \033[0m" << std::endl;
 }
 
 
 Dog::~Dog() {
 
+	delete m_brain;
 	std::cout << "\x1B[33mDog has been destroyed \033[0m" << std::endl;
 }
 
