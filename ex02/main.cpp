@@ -9,6 +9,8 @@ int main() {
 	Dog	husky;
 	Cat bengal;
 
+	//AAnimal test; // ERROR
+
 	husky.makeSound();
 	AAnimal *animal = &husky;
 	animal->makeSound();

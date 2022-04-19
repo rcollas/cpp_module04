@@ -6,6 +6,7 @@ SRC_FILES 	=	main.cpp \
 				WrongAnimal.cpp \
 				WrongCat.cpp \
 				Brain.cpp \
+				AAnimal.cpp \
 
 OBJS_DIR	=	objs
 

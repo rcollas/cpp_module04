@@ -10,7 +10,7 @@ int main() {
 	Cat bengal;
 
 	husky.makeSound();
-	AAnimal *animal = &husky;
+	Animal *animal = &husky;
 	animal->makeSound();
 	animal = &bengal;
 	animal->makeSound();

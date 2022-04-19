@@ -6,11 +6,11 @@
 class AAnimal {
 
 	public:
-		//AAnimal() = 0;
-		//AAnimal(AAnimal const &src);
-		virtual ~AAnimal() {};
+		AAnimal();
+		AAnimal(AAnimal const &src);
+		virtual ~AAnimal();
 
-		//AAnimal &operator=(AAnimal const &rhs);
+		virtual AAnimal &operator=(AAnimal const &rhs);
 
 		virtual void makeSound() = 0;
 

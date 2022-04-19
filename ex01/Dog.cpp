@@ -22,10 +22,22 @@ Dog::Dog(Dog const &src) : Animal(src) {
 Dog& Dog::operator=(const Dog &rhs) {
 
 	this->m_type = rhs.m_type;
+	delete this->m_brain;
+	this->m_brain = new Brain(*rhs.m_brain);
 	return *this;
 }
 
 void Dog::makeSound() {
 
 	std::cout << "\x1B[33mWoof \033[0m" << std::endl;
+}
+
+void Dog::setIdea(std::string idea, int index) {
+
+	this->m_brain->setIdea(idea, index);
+}
+
+std::string Dog::getIdea(int index) {
+
+	return this->m_brain->getIdea(index);
 }

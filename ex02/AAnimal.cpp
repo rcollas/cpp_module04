@@ -1,24 +1,24 @@
 #include "AAnimal.hpp"
 
-Animal::Animal() {
+AAnimal::AAnimal() {
 
 	std::cout << "\x1B[34mAnimal created\033[0m" << std::endl;
 }
 
-Animal::~Animal() {
+AAnimal::~AAnimal() {
 
 	std::cout << "\x1B[34mAnimal has been destroyed \033[0m" << std::endl;
 }
 
-Animal::Animal(Animal const &src) {
+AAnimal::AAnimal(AAnimal const &src) {
 
 	*this = src;
 }
 
-Animal& Animal::operator=(const Animal &rhs) {
+AAnimal& AAnimal::operator=(const AAnimal &rhs) {
 
 	this->m_type = rhs.m_type;
 	return *this;
 }
 
-void Animal::makeSound() {}
+void AAnimal::makeSound() {}

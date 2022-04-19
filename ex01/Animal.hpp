@@ -10,7 +10,7 @@ class Animal {
 		Animal(Animal const &src);
 		virtual ~Animal();
 
-		Animal &operator=(Animal const &rhs);
+		virtual Animal &operator=(Animal const &rhs);
 
 		virtual void makeSound();
 
