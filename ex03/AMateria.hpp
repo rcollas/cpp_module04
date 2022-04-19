@@ -2,8 +2,12 @@
 #define CPP_MODULE04_AMATERIA_HPP
 
 #include <iostream>
-
 #include "ICharacter.hpp"
+#include "ItemsHistory.hpp"
+
+class LinkedList;
+extern LinkedList* itemHistory;
+
 
 class AMateria {
 

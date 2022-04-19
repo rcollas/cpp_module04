@@ -1,6 +1,9 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria(std::string const &type) : m_type(type) {}
+AMateria::AMateria(std::string const &type) : m_type(type) {
+
+	itemHistory->add(this);
+}
 
 AMateria::~AMateria() {}
 

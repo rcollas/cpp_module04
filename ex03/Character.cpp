@@ -4,7 +4,6 @@ Character::Character(std::string name) : ICharacter() {
 
 	this->m_name = name;
 	this->m_totalItemsEquipped = 0;
-	this->m_totalItems = 0;
 	for (int i = 0; i < 4; i++)
 		this->m_inventory[i] = 0;
 }

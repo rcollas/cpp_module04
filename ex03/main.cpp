@@ -1,6 +1,9 @@
 #include "Ice.hpp"
 #include "Character.hpp"
 #include "Cure.hpp"
+#include "ItemsHistory.hpp"
+
+LinkedList* itemHistory = new LinkedList;
 
 int main() {
 
@@ -23,5 +26,8 @@ int main() {
 	brockovicz.use(0, *arsene);
 	brockovicz.use(1, brockovicz);
 
+	itemHistory->print();
+
+	delete itemHistory;
 	delete arsene;
 }

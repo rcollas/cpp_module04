@@ -12,7 +12,7 @@ Ice::Ice(Ice const &src) : AMateria(src) {
 
 AMateria* Ice::clone() const {
 
-	return new Ice;
+	return new Ice(*this);
 }
 
 void Ice::use(ICharacter &target) {

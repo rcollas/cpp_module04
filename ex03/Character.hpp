@@ -4,6 +4,7 @@
 #include <iostream>
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
+#include "ItemsHistory.hpp"
 
 class Character : public ICharacter {
 

@@ -5,6 +5,7 @@ SRC_FILES 	=	main.cpp \
 				Ice.cpp \
 				Cure.cpp \
 				Character.cpp \
+				ItemsHistory.cpp \
 
 OBJS_DIR	=	objs
 
@@ -17,6 +18,7 @@ INC_FILES	=	AMateria.hpp \
 				Cure.hpp \
 				ICharacter.hpp \
 				Character.hpp \
+				ItemsHistory.hpp \
 
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRC_FILES:.cpp=.o))
 
