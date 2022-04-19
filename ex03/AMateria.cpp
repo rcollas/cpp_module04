@@ -2,12 +2,17 @@
 
 AMateria::AMateria(std::string const &type) : m_type(type) {
 
-	itemHistory->add(this);
+	itemHistory.add(this);
 }
 
 AMateria::~AMateria() {}
 
-//AMateria::AMateria(AMateria const &src) {}
+AMateria::AMateria(AMateria const &src) {
+
+	itemHistory.add(this);
+	this->m_type = src.m_type;
+	*this = src;
+}
 
 void AMateria::use(ICharacter &target) {
 

@@ -3,17 +3,17 @@
 
 #include <iostream>
 #include "ICharacter.hpp"
-#include "ItemsHistory.hpp"
+#include "LinkedList.hpp"
 
 class LinkedList;
-extern LinkedList* itemHistory;
+extern LinkedList itemHistory;
 
 
 class AMateria {
 
 	public:
 		AMateria(std::string const & type);
-		//AMateria(AMateria const &src);
+		AMateria(AMateria const &src);
 		virtual ~AMateria();
 
 		AMateria &operator=(AMateria const &rhs);

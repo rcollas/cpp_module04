@@ -10,8 +10,12 @@ Character::Character(std::string name) : ICharacter() {
 
 Character::~Character() {
 
-	//for (int i = 0; i < m_totalItemsEquipped; i++)
-	//	delete m_inventory[i];
+	for (int i = 0; i < 4; i++) {
+		if (m_inventory[i]) {
+			itemHistory.erase(m_inventory[i]);
+			m_inventory[i] = 0;
+		}
+	}
 }
 
 Character::Character(Character const &src) {

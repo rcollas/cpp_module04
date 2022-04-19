@@ -4,7 +4,7 @@
 #include <iostream>
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
-#include "ItemsHistory.hpp"
+#include "LinkedList.hpp"
 
 class Character : public ICharacter {
 

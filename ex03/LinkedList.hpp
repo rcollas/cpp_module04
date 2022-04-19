@@ -1,5 +1,5 @@
-#ifndef CPP_MODULE04_ITEMSHISTORY_HPP
-#define CPP_MODULE04_ITEMSHISTORY_HPP
+#ifndef CPP_MODULE04_LINKEDLIST_HPP
+#define CPP_MODULE04_LINKEDLIST_HPP
 
 #include "AMateria.hpp"
 
@@ -20,20 +20,12 @@ class LinkedList {
 		~LinkedList();
 
 		void add(AMateria* materia);
+		void erase(AMateria* materia);
 		void print();
 
 	private:
 		Node* last();
 		Node* m_head;
-};
-
-class ItemsHistory {
-
-	public:
-		ItemsHistory();
-		~ItemsHistory();
-	private:
-
 };
 
 

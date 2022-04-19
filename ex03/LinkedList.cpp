@@ -1,4 +1,5 @@
-#include "ItemsHistory.hpp"
+#include "LinkedList.hpp"
+#include <iostream>
 
 Node::Node() {
 
@@ -28,13 +29,13 @@ LinkedList::~LinkedList() {
 
 	while (tmp) {
 		delete tmp->m_value;
+		tmp->m_value = 0;
 		toDelete = tmp;
 		tmp = tmp->m_next;
 		delete toDelete;
+		toDelete = 0;
 	}
 }
-
-#include <iostream>
 
 Node* LinkedList::last() {
 
@@ -47,7 +48,6 @@ Node* LinkedList::last() {
 
 void LinkedList::add(AMateria *materia) {
 
-	//Node* last = this->last();
 	Node* newNode = new Node(materia);
 
 	if (!m_head) {
@@ -57,6 +57,35 @@ void LinkedList::add(AMateria *materia) {
 		last->m_next = newNode;
 	}
 }
+
+void LinkedList::erase(AMateria *materia) {
+
+	Node* tmp = m_head;
+	Node* prev = 0;
+
+	if (tmp != 0 && tmp->m_value == materia) {
+		m_head = tmp->m_next;
+		delete tmp->m_value;
+		tmp->m_value = 0;
+		delete tmp;
+		tmp = 0;
+		return ;
+	} else {
+		while (tmp && tmp->m_value != materia) {
+			prev = tmp;
+			tmp = tmp->m_next;
+		}
+		if (tmp == 0) {
+			return;
+		}
+		prev->m_next = tmp->m_next;
+		delete tmp->m_value;
+		tmp->m_value = 0;
+		delete tmp;
+		tmp = 0;
+	}
+}
+
 
 void LinkedList::print() {
 
